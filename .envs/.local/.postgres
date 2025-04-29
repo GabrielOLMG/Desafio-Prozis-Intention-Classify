@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=desafio_prozis
+POSTGRES_USER=uQfUUDjfnWnATuhaJdVIiESfGanEtDaZ
+POSTGRES_PASSWORD=GKSXS4Py2hCml11PMQpQnYdRkWazJ2s9jz6s93HZYDPM6ZEDvQbt5KBT27Eg9tsn
