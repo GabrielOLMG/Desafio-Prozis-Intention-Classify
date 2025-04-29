@@ -19,7 +19,7 @@ services:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
     ports:
-      - '8000:8000'
+      - '8001:8001'
     command: /start
 
   postgres:
@@ -66,7 +66,7 @@ services:
     image: desafio_prozis_local_flower
     container_name: desafio_prozis_local_flower
     ports:
-      - '5555:5555'
+      - '5556:5556'
     command: /start-flower
 
   node:
@@ -83,6 +83,6 @@ services:
       - /app/node_modules
     command: npm run dev
     ports:
-      - '3000:3000'
+      - '3003:3003'
       # Expose browsersync UI: https://www.browsersync.io/docs/options/#option-ui
-      - '3001:3001'
+      - '3002:3002'
