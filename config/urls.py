@@ -19,7 +19,8 @@ urlpatterns = [
     path("users/", include("desafio_prozis.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    # ...
+    path("ml_models/", include("desafio_prozis.ml_models.urls")),
+    path("core/", include("desafio_prozis.core.urls")),
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
