@@ -36,3 +36,7 @@ logs *args:
 # manage: Executes `manage.py` command.
 manage +args:
     @docker compose run --rm django python ./manage.py {{args}}
+
+shell service='django':
+    @echo "Accessing the `{{service}}` container via shell..."
+    @docker-compose exec {{service}} /bin/bash
