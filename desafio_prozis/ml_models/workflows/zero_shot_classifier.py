@@ -1,7 +1,12 @@
+from functools import lru_cache
+
 from transformers import Pipeline
 from transformers import pipeline
 
+zero_shot_model = None
 
+
+@lru_cache(maxsize=1)
 def get_zero_shot_model(
     model_text: str,
     hypothesis_template: str,
@@ -23,4 +28,4 @@ def get_text_label(
     resultado = classifier(text, candidate_labels=labels)
     if not get_best:
         return list(zip(resultado["labels"], resultado["scores"], strict=False))
-    return list(zip(resultado["labels"], resultado["scores"], strict=False))
+    return next(zip(resultado["labels"], resultado["scores"], strict=False))
