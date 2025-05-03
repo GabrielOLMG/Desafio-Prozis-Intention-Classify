@@ -1,3 +1,4 @@
+from collections.abc import Callable
 from pathlib import Path
 
 from sentence_transformers import SentenceTransformer
@@ -6,6 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 
+from desafio_prozis.ml_models.models import UnitTest
 from desafio_prozis.ml_models.workflows.general_functions import load_pickle_file
 from desafio_prozis.ml_models.workflows.general_functions import save_pickle_file
 
@@ -53,11 +55,25 @@ def train_clustering_model(
     return model_data
 
 
+def get_default_train_data():
+    text = (
+        UnitTest.objects.filter(custom_test=True)
+        .order_by("id")
+        .values_list("text", flat=True)
+    )
+    labels = (
+        UnitTest.objects.filter(custom_test=True)
+        .order_by("id")
+        .values_list("expected_label__text", flat=True)
+    )
+
+    return text, labels
+
+
 def get_or_train_model(
-    texts: list,
-    labels: list,
     model_name: str,
     model_path: Path,
+    train_data_loader: Callable = get_default_train_data,
     *,
     train_again: bool,
 ) -> tuple[dict, bool]:
@@ -67,6 +83,7 @@ def get_or_train_model(
         model_data = load_pickle_file(model_path)
     else:
         model_path.parent.mkdir(parents=True, exist_ok=True)
+        texts, labels = train_data_loader()
         model_data = train_clustering_model(
             model_name,
             labels,
