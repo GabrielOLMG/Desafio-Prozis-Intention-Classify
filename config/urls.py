@@ -7,6 +7,8 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from filebrowser.sites import site
 
+from desafio_prozis.ml_models.api.views.classify import ClassifyUserIntentionView
+
 urlpatterns = [
     path(settings.ADMIN_URL + "filebrowser/", site.urls),
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -23,6 +25,12 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     path("ml_models/", include("desafio_prozis.ml_models.urls")),
     path("core/", include("desafio_prozis.core.urls")),
+    # API REST
+    path(
+        "api/classify",
+        ClassifyUserIntentionView.as_view(),
+        name="classify-user-intention",
+    ),
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
