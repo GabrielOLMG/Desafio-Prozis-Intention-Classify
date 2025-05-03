@@ -358,3 +358,26 @@ cluster_info = {
 }
 CONSTANCE_CONFIG.update(cluster_values)
 CONSTANCE_CONFIG_FIELDSETS.update(cluster_info)
+
+zero_shot_values = {
+    "PATH_ZERO_SHOT_MODEL_DATA": (
+        "zero_shot_data/data.pkl",
+        "Path Dentro de Media Onde Sera Salvo Os Modelos",
+        str,
+    ),
+    "ZERO_SHOT_MODEL_NAME": (
+        "joeddav/xlm-roberta-large-xnli",
+        "Nome do Modelo Zero Shot Usado",
+        str,
+    ),
+    "ZERO_SHOT_MODEL_HYPOTHESIS": (
+        "O usuário está tentando {}.",
+        "Hipótese usada no Zero Shot",
+        str,
+    ),
+}
+zero_shot_info = {
+    "Zero Shot Model": {"fields": list(zero_shot_values), "collapse": True},
+}
+CONSTANCE_CONFIG.update(zero_shot_values)
+CONSTANCE_CONFIG_FIELDSETS.update(zero_shot_info)
