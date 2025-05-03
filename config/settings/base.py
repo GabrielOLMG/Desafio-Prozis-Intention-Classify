@@ -61,6 +61,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # APPS
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
+    "filebrowser",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -82,6 +83,11 @@ THIRD_PARTY_APPS = [
     "import_export",
 ]
 
+EXTRA_APPS = [
+    "admin_reorder",
+    "constance",
+]
+
 LOCAL_APPS = [
     "desafio_prozis.users",
     # Your stuff: custom apps go here
@@ -89,7 +95,7 @@ LOCAL_APPS = [
     "desafio_prozis.core",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS + EXTRA_APPS
 
 # MIGRATIONS
 # ------------------------------------------------------------------------------
@@ -325,3 +331,30 @@ SOCIALACCOUNT_FORMS = {"signup": "desafio_prozis.users.forms.UserSocialSignupFor
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# Filebrowser
+FILEBROWSER_DIRECTORY = ""
+DIRECTORY = ""
+
+# Constance
+CONSTANCE_REDIS_CONNECTION = env("REDIS_URL", default="redis://localhost:6379/0")
+CONSTANCE_CONFIG = {}
+CONSTANCE_CONFIG_FIELDSETS = {}
+
+cluster_values = {
+    "PATH_CLUSTERS_DATA": (
+        "clusters_data/data.pkl",
+        "Path Dentro de Media Onde Sera Salvo Os Modelos",
+        str,
+    ),
+    "MODEL_CLUSTERS_EMBEDING_NAME": (
+        "paraphrase-multilingual-MiniLM-L12-v2",
+        "Nome do Modelo Embeding Usado",
+        str,
+    ),
+}
+cluster_info = {
+    "Cluster de Labels": {"fields": list(cluster_values), "collapse": True},
+}
+CONSTANCE_CONFIG.update(cluster_values)
+CONSTANCE_CONFIG_FIELDSETS.update(cluster_info)
