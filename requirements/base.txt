@@ -21,7 +21,7 @@ django-import-export==4.3.7 # https://github.com/django-import-export/django-imp
 django-filebrowser-no-grappelli==4.0.2 # https://github.com/smacker/django-filebrowser-no-grappelli
 django-modeladmin-reorder==0.3.1 # https://github.com/mishbahr/django-modeladmin-reorder
 django-constance==2.9.1 # https://github.com/jazzband/django-constance
-
+djangorestframework==3.16.0 # https://www.django-rest-framework.org
 
 # Others
 # ------------------------------------------------------------------------------

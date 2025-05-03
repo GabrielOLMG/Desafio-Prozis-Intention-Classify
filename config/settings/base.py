@@ -86,6 +86,7 @@ THIRD_PARTY_APPS = [
 EXTRA_APPS = [
     "admin_reorder",
     "constance",
+    "rest_framework",
 ]
 
 LOCAL_APPS = [
