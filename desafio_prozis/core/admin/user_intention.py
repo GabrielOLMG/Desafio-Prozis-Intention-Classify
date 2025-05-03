@@ -5,4 +5,4 @@ from desafio_prozis.core.models import UserIntention
 
 @admin.register(UserIntention)
 class UserIntentionAdmin(admin.ModelAdmin):
-    list_display = ("id", "text")
+    list_display = ("id", "text", "ml_text")
