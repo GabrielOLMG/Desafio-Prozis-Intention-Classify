@@ -82,6 +82,7 @@ def get_or_train_model(
     if not train_again and model_path.exists():
         model_data = load_pickle_file(model_path)
     else:
+        load_pickle_file.cache_clear()
         model_path.parent.mkdir(parents=True, exist_ok=True)
         texts, labels = train_data_loader()
         model_data = train_clustering_model(

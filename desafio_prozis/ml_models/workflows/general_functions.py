@@ -1,7 +1,9 @@
 import pickle
+from functools import lru_cache
 from pathlib import Path
 
 
+@lru_cache(maxsize=1)
 def load_pickle_file(filepath: Path) -> object:
     filepath = Path(filepath)
     with filepath.open("rb") as f:
