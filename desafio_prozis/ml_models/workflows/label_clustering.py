@@ -64,10 +64,10 @@ def get_default_train_data():
     labels = (
         UnitTest.objects.filter(custom_test=True)
         .order_by("id")
-        .values_list("expected_label__text", flat=True)
+        .values_list("expected_label__ml_text", flat=True)
     )
 
-    return text, labels
+    return list(text), list(labels)
 
 
 def get_or_train_model(
