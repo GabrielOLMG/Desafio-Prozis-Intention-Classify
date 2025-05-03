@@ -79,7 +79,7 @@ def get_or_train_model(
     return model_data, created
 
 
-def get_cluster_labels(text: str, model_data: dict, n_best: int) -> list:
+def get_cluster_labels(text: str, model_data: dict, *, n_best: int) -> list:
     model_llm = model_data["model_llm"]
     scaler_model = model_data["scaler_model"]
     lda_model = model_data["lda_model"]
