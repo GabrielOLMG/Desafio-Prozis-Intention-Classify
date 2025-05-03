@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   # dependencies for building Python packages
   build-essential \
   # psycopg dependencies
-  libpq-dev
+  libpq-dev \
+  # transformers pipeline dependence
+  libprotobuf-dev \
+  # transformers pipeline dependence
+  protobuf-compiler
 
 # Requirements are installed here to ensure they will be cached.
 COPY ./requirements .
@@ -90,3 +94,11 @@ RUN chmod +x /start-flower
 COPY . ${APP_HOME}
 
 ENTRYPOINT ["/entrypoint"]
+
+
+# Pre Carrega Modelos Que Serão Usados
+RUN python -c "\
+from transformers import pipeline; pipeline('zero-shot-classification', model='joeddav/xlm-roberta-large-xnli', from_tf=True); \
+from sentence_transformers import SentenceTransformer; SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')"
+
+# https://huggingface.co/joeddav/xlm-roberta-large-xnli

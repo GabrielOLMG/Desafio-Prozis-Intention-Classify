@@ -18,3 +18,15 @@ django-crispy-forms==2.3  # https://github.com/django-crispy-forms/django-crispy
 crispy-bootstrap5==2025.4  # https://github.com/django-crispy-forms/crispy-bootstrap5
 django-redis==5.4.0  # https://github.com/jazzband/django-redis
 django-import-export==4.3.7 # https://github.com/django-import-export/django-import-export
+
+
+# Others
+# ------------------------------------------------------------------------------
+transformers==4.51.3
+torch==2.7.0
+protobuf==3.20.0
+sentencepiece== 0.2.0
+scikit-learn==1.6.1
+pandas==2.2.3
+numpy==2.2.5
+sentence-transformers==4.1.0
