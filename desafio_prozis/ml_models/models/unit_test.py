@@ -20,6 +20,11 @@ class UnitTest(models.Model):
         help_text="Predicted label",
     )
 
+    custom_test = models.BooleanField(
+        default=False,
+        help_text="whether it is a test created by prozis or not",
+    )
+
     class Meta:
         db_table = "unit_test"
         verbose_name = "Unit Test"

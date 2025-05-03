@@ -13,7 +13,7 @@ class UnitTestResource(resources.ModelResource):
     class Meta:
         model = UnitTest
         import_id_fields = []  # Usando os campos definidos manualmente
-        fields = ("text", "expected_label", "predicted_label")
+        fields = ("text", "expected_label", "predicted_label", "custom_test")
 
     def skip_row(self, instance, original, row, import_validation_errors=None):
         existing_combinations = set(
@@ -49,4 +49,11 @@ class UnitTestResource(resources.ModelResource):
 @admin.register(UnitTest)
 class UnitTestAdmin(ImportExportModelAdmin):
     resource_class = UnitTestResource
-    list_display = ("id", "text", "expected_label", "predicted_label", "is_correct")
+    list_display = (
+        "id",
+        "text",
+        "expected_label",
+        "predicted_label",
+        "custom_test",
+        "is_correct",
+    )
