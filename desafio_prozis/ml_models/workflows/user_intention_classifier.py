@@ -4,6 +4,7 @@ from pathlib import Path
 from constance import config
 from django.conf import settings
 
+from desafio_prozis.core.models import UserIntention
 from desafio_prozis.ml_models.workflows.label_clustering import get_cluster_labels
 from desafio_prozis.ml_models.workflows.label_clustering import get_or_train_model
 from desafio_prozis.ml_models.workflows.zero_shot_classifier import get_text_label
@@ -40,6 +41,7 @@ def classify_user_intention(text: str) -> tuple[str, float]:
 
     logger.info("Calculando Intenção do Usuario")
     label, score = get_text_label(zero_shot_model, text, labels_filtered, get_best=True)
+    label = UserIntention.objects.get(ml_text=label).text
 
     logger.info("[RESULTADO] Texto '%s' Label %s Score %s ", text, label, score)
 
