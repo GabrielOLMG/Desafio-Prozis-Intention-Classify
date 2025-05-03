@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from constance import config
-from django.conf import settings
 from sentence_transformers import SentenceTransformer
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.neighbors import KNeighborsClassifier
@@ -16,7 +14,7 @@ def train_clustering_model(
     model_name: str,
     labels: list,
     texts: list,
-    model_path: str,
+    model_path: Path,
 ) -> dict:
     model_llm = SentenceTransformer(model_name)
 
@@ -58,10 +56,11 @@ def train_clustering_model(
 def get_or_train_model(
     texts: list,
     labels: list,
+    model_name: str,
+    model_path: Path,
     *,
     train_again: bool,
 ) -> tuple[dict, bool]:
-    model_path = Path(settings.MEDIA_ROOT) / config.PATH_CLUSTERS_DATA
     created = False
 
     if not train_again and model_path.exists():
@@ -69,7 +68,7 @@ def get_or_train_model(
     else:
         model_path.parent.mkdir(parents=True, exist_ok=True)
         model_data = train_clustering_model(
-            config.MODEL_CLUSTERS_EMBEDING_NAME,
+            model_name,
             labels,
             texts,
             model_path,
