@@ -33,16 +33,29 @@ def classify_user_intention(text: str) -> tuple[str, float]:
 
     logger.info("Aplicando Modelo de Cluster")
     labels_filtered = get_cluster_labels(text, model_data, n_best=3)
+    logger.info("Possiveis Labels: %s", labels_filtered)
+
     labels_filtered = [str(label) for label, score in labels_filtered]
-    logger.info("Possíveis Labels: %s", labels_filtered)
 
     logger.info("Carregando Modelo Zero Shot")
     zero_shot_model = get_zero_shot_model(model_zero_shot_name, hypothesis_template)
 
     logger.info("Calculando Intenção do Usuario")
     label, score = get_text_label(zero_shot_model, text, labels_filtered, get_best=True)
-    label = UserIntention.objects.get(ml_text=label).text
 
-    logger.info("[RESULTADO] Texto '%s' Label %s Score %s ", text, label, score)
+    logger.info("Sem tradução: %s ", label)
+    label_correct = UserIntention.objects.get(ml_text=label).text
 
-    return label, score
+    logger.info(
+        "[RESULTADO] Texto '%s' Label %s[%s] Score %s ",
+        text,
+        label,
+        label_correct,
+        score,
+    )
+
+    return label_correct, score
+
+
+if __name__ == "__main__":
+    pass
