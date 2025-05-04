@@ -299,7 +299,7 @@ cd Desafio-Prozis-Intention-Classify
 just build
 ```
 
-### 3. Inicializa Pytohn interpreter
+### 3. Inicializa Python interpreter
 
 - Settings > Project > Python Interpreter > New > Docker Compose
 
