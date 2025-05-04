@@ -322,8 +322,6 @@ tags
 # Redis dump file
 dump.rdb
 
-### Project template
-desafio_prozis/media/
 
 .pytest_cache/
 .ipython/
