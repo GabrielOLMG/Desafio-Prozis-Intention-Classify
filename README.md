@@ -185,6 +185,7 @@ Cada app criada, `core` e `ml_models`, segue a estrutura a seguir:
 1. **workflows/**: Contém toda a lógica de machine learning (ex: clusterização, embeddings, classificação zero-shot).
 2. **tests/**: Testes unitários da API REST.
 3. **api/**: Implementação da API REST (views, serializers, URLs).
+4. **tasks/**: Pasta que contém os processos do Celery, usados para executar scripts de forma assíncrona.
 
 #### 🔸 Outros arquivos importantes do projeto:
 
@@ -192,7 +193,7 @@ Cada app criada, `core` e `ml_models`, segue a estrutura a seguir:
 2. **config/urls.py**: Registro das URLs globais do projeto, incluindo as da API.
 3. **compose/local/django/Dockerfile**: Dockerfile para criação do ambiente.
 4. **requirements/**: Contém os arquivos de dependências. O principal é `base.txt`.
-5. **docker-compose.docs.yml**: Configuração adicional para serviços (por exemplo, documentação, docs preview, etc).
+5. **docker-compose.local.yml**: Configuração adicional para serviços (por exemplo, documentação, docs preview, etc).
 6. **setup_files**: Pasta Contendo os Arquivos Necessarios para inicialização completa do projeto
 
 ---
@@ -222,6 +223,8 @@ App voltada para toda a lógica de classificação e workflows de machine learni
 - **UnitTest**: Permite armazenar casos de teste para avaliar o desempenho do modelo.
   O campo `custom_test` diferencia se o exemplo é de treino (usado para KNN) ou de teste (fornecido pelo desafio).
   A ideia é expandir continuamente os exemplos de treino, melhorando a generalização do modelo de KNN ao longo do tempo.
+
+- **UnitTestProcess**: Modelo responsavel por iniciar os processos unitarios dos modelos, em modo assincrona, usando celery
 
 ---
 
@@ -268,21 +271,68 @@ onde podera criar mais testes
 
     http://localhost:8001/admin/ml_models/unittest/
 
-Para aplicar os testes unitarios nos exemplos em UnitTest, basta ir para
+Para executar os testes unitários dos exemplos em UnitTest, acesse o link,
+selecione o processo, clique em "Ações" → "1. Executar Processos Unitários"
+e depois em "Ir".
 
     http://localhost:8001/admin/ml_models/unittestprocess/
 
 ## 🧪 Como Rodar Localmente
 
-### 1. Clone o projeto
+### 1. Clonar o projeto
 
 ```bash
-git clone git@github.com:GabrielOLMG/desafio_prozis.git
-cd nome-do-projeto
+git clone git@github.com:GabrielOLMG/Desafio-Prozis-Intention-Classify.git
+cd Desafio-Prozis-Intention-Classify
 ```
 
-### N. Inicializando Dado
+### 2. Fazer Build do projeto
+
+```bash
+just build
+```
+
+### 3. Inicializa Pytohn interpreter
+
+- Settings > Project > Python Interpreter > New > Docker Compose
+
+        Configuration files: docker-compose.local.yml
+        Service: django
+
+### 4. Inicializa docker
+
+```bash
+just manage up
+```
+
+### 5. Inicializando Dados bases
 
 ```bash
 just manage init_all
 ```
+
+### 6. Cria um superuser proprio
+
+Este passo é opcional, pois no passo anterior já foi criado um superusuário com:
+
+usuário: `admin` senha: `admin`
+
+```bash
+just manage createsuperuser
+```
+
+### 7. Iniciar Projeto
+
+```bash
+just manage runserver 127.0.0.1:8001
+
+```
+
+## Observação Final
+
+Gostaria de informar que, na primeira execução, o processo pode levar alguns
+instantes a mais devido ao carregamento e criação de caches. Após essa etapa
+inicial, o desempenho será significativamente mais rápido nas próximas execuções.
+
+Aproveito para agradecer sinceramente pela oportunidade. Independentemente do
+resultado, foi uma experiência muito enriquecedora e valiosa para mim.
