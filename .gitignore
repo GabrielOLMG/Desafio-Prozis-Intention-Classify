@@ -319,6 +319,9 @@ Session.vim
 # Auto-generated tag files
 tags
 
+#
+*.pkl
+
 # Redis dump file
 dump.rdb
 
