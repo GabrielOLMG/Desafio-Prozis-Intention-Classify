@@ -1,0 +1,340 @@
+[
+  {
+    "text": "é confiável comprar aqui?",
+    "expected_label": 6,
+    "custom_test": "1"
+  },
+  {
+    "text": "vocês fazem envio internacional?",
+    "expected_label": 6,
+    "custom_test": "1"
+  },
+  {
+    "text": "como funciona a devolução?",
+    "expected_label": 6,
+    "custom_test": "1"
+  },
+  {
+    "text": "qual a validade desse produto?",
+    "expected_label": 6,
+    "custom_test": "1"
+  },
+  { "text": "olá, tudo bem?", "expected_label": 6, "custom_test": "1" },
+  {
+    "text": "são produtos originais?",
+    "expected_label": 6,
+    "custom_test": "1"
+  },
+  {
+    "text": "qual é o prazo de entrega?",
+    "expected_label": 6,
+    "custom_test": "1"
+  },
+  { "text": "consigo usar cupom?", "expected_label": 6, "custom_test": "1" },
+  { "text": "isso funciona mesmo?", "expected_label": 6, "custom_test": "1" },
+  { "text": "tem alguém aí?", "expected_label": 6, "custom_test": "1" },
+  {
+    "text": "encontrar produto com colágeno",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "ver suplementos para energia",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "tem whey concentrado no site?",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "ver opções de creatina monohidratada",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "mostrar proteína com sabor baunilha",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "buscar suplemento para recuperação muscular",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "procurando BCAA para treino",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "tem barra proteica sem açúcar?",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "onde encontro proteína isolada?",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "quero ver suplementos veganos",
+    "expected_label": 1,
+    "custom_test": "1"
+  },
+  {
+    "text": "esse pack de vitaminas serve pra imunidade?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "qual o melhor horário pra tomar esse suplemento?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "esse produto tem lactose?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "esse termogênico é natural?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "glutamina ajuda na recuperação?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "qual a composição dessa barra de proteína?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "esse pré-treino tem cafeína?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "pra que serve esse multivitamínico?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "como tomar whey protein?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "quais os benefícios da creatina?",
+    "expected_label": 2,
+    "custom_test": "1"
+  },
+  {
+    "text": "pode botar esse suplemento no carrinho",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "adiciona esse pack de vitaminas",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "coloca a proteína vegetal aí pra mim",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "quero esse termogênico no carrinho",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "adiciona a glutamina também",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "joga esse pré-treino no carrinho",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "coloca multivitamínico no carrinho",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "bota essa barra de proteína aí",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "quero colocar creatina no meu carrinho",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "adiciona whey protein no carrinho",
+    "expected_label": 3,
+    "custom_test": "1"
+  },
+  {
+    "text": "ver itens que coloquei no carrinho",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  {
+    "text": "mostrar o carrinho, por favor",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  {
+    "text": "acessar carrinho de compras",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  {
+    "text": "onde está meu carrinho?",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  { "text": "me leva pro carrinho", "expected_label": 4, "custom_test": "1" },
+  {
+    "text": "ir para o carrinho agora",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  {
+    "text": "ver os produtos que estão no carrinho",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  {
+    "text": "mostrar o que já adicionei",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  {
+    "text": "abrir o carrinho de compras",
+    "expected_label": 4,
+    "custom_test": "1"
+  },
+  { "text": "quero ver meu carrinho", "expected_label": 4, "custom_test": "1" },
+  {
+    "text": "clicar para confirmar o pedido",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "tá tudo certo, quero concluir a compra",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "confirma esse pedido pra mim",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "vamos fechar essa compra",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "quero fazer o pagamento e concluir",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "como confirmar essa encomenda?",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "já escolhi, quero comprar",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  { "text": "fechar pedido agora", "expected_label": 5, "custom_test": "1" },
+  {
+    "text": "pode confirmar meu pedido?",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  {
+    "text": "quero finalizar minha compra",
+    "expected_label": 5,
+    "custom_test": "1"
+  },
+  { "text": "tens desconto?", "expected_label": 6, "custom_test": "0" },
+  { "text": "promoções?", "expected_label": 6, "custom_test": "0" },
+  { "text": "falar com suporte", "expected_label": 6, "custom_test": "0" },
+  { "text": "preciso de ajuda", "expected_label": 6, "custom_test": "0" },
+  { "text": "obrigado", "expected_label": 6, "custom_test": "0" },
+  { "text": "concluir a encomenda", "expected_label": 5, "custom_test": "0" },
+  { "text": "efetuar pagamento", "expected_label": 5, "custom_test": "0" },
+  { "text": "finalizar compra", "expected_label": 5, "custom_test": "0" },
+  { "text": "pagar agora", "expected_label": 5, "custom_test": "0" },
+  { "text": "Confirmar encomenda", "expected_label": 5, "custom_test": "0" },
+  {
+    "text": "consultar carrinho de compras",
+    "expected_label": 4,
+    "custom_test": "0"
+  },
+  {
+    "text": "ver os itens do carrinho",
+    "expected_label": 4,
+    "custom_test": "0"
+  },
+  { "text": "quero finalizar", "expected_label": 4, "custom_test": "0" },
+  { "text": "ir para o cesto", "expected_label": 4, "custom_test": "0" },
+  { "text": "Mostrar carrinho", "expected_label": 4, "custom_test": "0" },
+  {
+    "text": "comprar pack de proteínas",
+    "expected_label": 3,
+    "custom_test": "0"
+  },
+  {
+    "text": "adiciona vitamina D ao carrinho",
+    "expected_label": 3,
+    "custom_test": "0"
+  },
+  {
+    "text": "põe a creatina no cesto",
+    "expected_label": 3,
+    "custom_test": "0"
+  },
+  {
+    "text": "quero comprar 2 caixas de barras",
+    "expected_label": 3,
+    "custom_test": "0"
+  },
+  {
+    "text": "Adicionar 1kg de aveia ao carrinho",
+    "expected_label": 3,
+    "custom_test": "0"
+  },
+  { "text": "efeitos da glutamina", "expected_label": 2, "custom_test": "0" },
+  { "text": "para que serve BCAA?", "expected_label": 2, "custom_test": "0" },
+  { "text": "como tomar creatina", "expected_label": 2, "custom_test": "0" },
+  { "text": "benefícios omega 3", "expected_label": 2, "custom_test": "0" },
+  {
+    "text": "Qual a diferença entre whey concentrada e isolada?",
+    "expected_label": 2,
+    "custom_test": "0"
+  },
+  {
+    "text": "encontrar proteína vegetal",
+    "expected_label": 1,
+    "custom_test": "0"
+  },
+  { "text": "procurar creatina", "expected_label": 1, "custom_test": "0" },
+  { "text": "barra de amendoim", "expected_label": 1, "custom_test": "0" },
+  { "text": "ver multivitaminicos", "expected_label": 1, "custom_test": "0" },
+  { "text": "Whey Isolate", "expected_label": 1, "custom_test": "0" }
+]

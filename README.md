@@ -280,3 +280,9 @@ Para aplicar os testes unitarios nos exemplos em UnitTest, basta ir para
 git clone git@github.com:GabrielOLMG/desafio_prozis.git
 cd nome-do-projeto
 ```
+
+### N. Inicializando Dado
+
+```bash
+just manage init_all
+```

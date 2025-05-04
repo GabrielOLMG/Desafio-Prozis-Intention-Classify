@@ -1,0 +1,44 @@
+[
+  {
+    "model": "core.userintention",
+    "pk": 6,
+    "fields": {
+      "text": "unknown_intention",
+      "ml_text": "realizar uma ação desconhecida"
+    }
+  },
+  {
+    "model": "core.userintention",
+    "pk": 5,
+    "fields": { "text": "confirm_order", "ml_text": "confirmar pedido" }
+  },
+  {
+    "model": "core.userintention",
+    "pk": 2,
+    "fields": {
+      "text": "product_info",
+      "ml_text": "consultar informações do produto"
+    }
+  },
+  {
+    "model": "core.userintention",
+    "pk": 1,
+    "fields": { "text": "search_product", "ml_text": "procurar um produto" }
+  },
+  {
+    "model": "core.userintention",
+    "pk": 4,
+    "fields": {
+      "text": "go_to_shopping_cart",
+      "ml_text": "consultar carrinho de compras"
+    }
+  },
+  {
+    "model": "core.userintention",
+    "pk": 3,
+    "fields": {
+      "text": "add_to_cart",
+      "ml_text": "enviar produto para o carrinho"
+    }
+  }
+]

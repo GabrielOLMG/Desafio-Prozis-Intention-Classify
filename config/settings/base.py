@@ -6,6 +6,8 @@ from pathlib import Path
 
 import environ
 
+RUNSCRIPT_PATHS = ["setup_files"]
+
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # desafio_prozis/
 APPS_DIR = BASE_DIR / "desafio_prozis"
