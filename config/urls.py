@@ -8,6 +8,7 @@ from django.views.generic import TemplateView
 from filebrowser.sites import site
 
 from desafio_prozis.ml_models.api.views.classify import ClassifyUserIntentionView
+from desafio_prozis.ml_models.views.home_view import home_view
 
 urlpatterns = [
     path(settings.ADMIN_URL + "filebrowser/", site.urls),
@@ -30,6 +31,12 @@ urlpatterns = [
         "api/classify",
         ClassifyUserIntentionView.as_view(),
         name="classify-user-intention",
+    ),
+    # Home View
+    path(
+        "home/",
+        home_view,
+        name="home_view",
     ),
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
