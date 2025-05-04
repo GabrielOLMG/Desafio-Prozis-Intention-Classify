@@ -224,38 +224,52 @@ App voltada para toda a lógica de classificação e workflows de machine learni
 
 ---
 
-## 🔍 Como Executar Testes Automatizados e endpoinnt
+## 🔍 Como Executar Testes Automatizados e Interagir com a API
 
 ### API REST
 
-Como pedido no desafio, foi feito um endpoint chamado `/classify`. É possivel testar esse end point ou atravez do localhot, indo até a url:
+Como solicitado no desafio, foi criado o endpoint:
+POST /api/classify
 
-    http://localhost:8001/api/classify
+#### Acessos disponíveis:
 
-Ou tambem pode ser feito via curl, no terminal:
+- Via navegador (local):
+
+        localhost:8001/api/classify
+
+- Via terminal com `curl`:
+  ```bash
+  curl -X POST http://localhost:8001/api/classify \
+       -H "Content-Type: application/json" \
+       -d '{"text": "como devo tomar creatina"}'
+  ```
+
+### Testes Automatizados
+
+Para rodar os testes, use o comando abaixo no terminal:
 
 ```bash
- curl -X POST http://localhost:8001/api/classify  -H "Content-Type: application/json"  -d '{"text": "como devo tomar  creatina"}'
+just manage test
 ```
 
-### Tests
-
-Para aplicar testes basta fazer no terminal:
-
-```bash
- just manage test
-
-```
-
-qualquer outro teste deve ser implementado em:
+Os testes estão localizados em:
 
     desafio_prozis/ml_models/tests/test_api_classify.py
 
-### Admin
+### Acesso ao Admin
 
-Para
+Para acessar o painel de administração do Django:
 
----
+    http://localhost:8001/admin
+
+Para acessar os testes unitarios para os modelos basta ir para o link abaixo,
+onde podera criar mais testes
+
+    http://localhost:8001/admin/ml_models/unittest/
+
+Para aplicar os testes unitarios nos exemplos em UnitTest, basta ir para
+
+    http://localhost:8001/admin/ml_models/unittestprocess/
 
 ## 🧪 Como Rodar Localmente
 
