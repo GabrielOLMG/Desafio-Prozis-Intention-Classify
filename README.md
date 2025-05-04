@@ -176,7 +176,7 @@ Cada app criada, `core` e `ml_models`, segue a estrutura a seguir:
 1. **admin/**: Registro dos modelos no Django Admin.
 2. **migrations/**: Arquivos de migração, responsáveis por refletir alterações nos modelos no banco de dados.
 3. **models/**: Contém os modelos Django. Cada modelo está separado em arquivos diferentes para melhor organização.
-4. **views/**: Views do Django (não utilizadas neste projeto, mas mantidas por padrão).
+4. **views/**: Views do Django, utilizado para fazer a view da home.
 5. **apps.py**: Definição da app.
 6. **urls.py**: Registro das URLs da app. Não utilizado diretamente aqui, mas importante caso a app tenha rotas próprias.
 
@@ -229,6 +229,13 @@ App voltada para toda a lógica de classificação e workflows de machine learni
 ---
 
 ## 🔍 Como Executar Testes Automatizados e Interagir com a API
+
+### Front End exemplo
+
+Com o objetivo de mostrar a utilização da API REST em uma barra de pesquisa, criei um front-end genérico
+e inicial apenas para demonstrar como seria o funcionamento.
+
+    http://localhost:8001/home/
 
 ### API REST
 
