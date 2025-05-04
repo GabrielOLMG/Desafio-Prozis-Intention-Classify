@@ -12,7 +12,9 @@ from desafio_prozis.ml_models.tasks.global_tasks.check_async import check_async
     soft_time_limit=60**6,
 )
 def unit_test(task, process_id):
-    unit_test_process = check_async(
+    from desafio_prozis.ml_models.workflows.apply_unit_test import apply_unit_test
+
+    check_async(
         task,
         process_id,
         class_name="UnitTestProcess",
@@ -20,4 +22,4 @@ def unit_test(task, process_id):
         change=True,
     )
 
-    unit_test(process_id=unit_test_process.id)
+    apply_unit_test()
