@@ -32,7 +32,7 @@ def classify_user_intention(text: str) -> tuple[str, float]:
     logger.info("Modelo de Cluster Carregado")
 
     logger.info("Aplicando Modelo de Cluster")
-    labels_filtered = get_cluster_labels(text, model_data, n_best=3)
+    labels_filtered = get_cluster_labels(text, model_data, n_best=4)
     logger.info("Possiveis Labels: %s", labels_filtered)
 
     labels_filtered = [str(label) for label, score in labels_filtered]

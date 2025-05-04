@@ -33,3 +33,9 @@ class ClassifyAPITestCase(APITestCase):
             format="json",
         )
         assert response.status_code == HTTP_400
+        response = self.client.post(
+            "/api/classify",
+            {"text": ""},
+            format="json",
+        )
+        assert response.status_code == HTTP_400
