@@ -193,6 +193,7 @@ Cada app criada, `core` e `ml_models`, segue a estrutura a seguir:
 3. **compose/local/django/Dockerfile**: Dockerfile para criação do ambiente.
 4. **requirements/**: Contém os arquivos de dependências. O principal é `base.txt`.
 5. **docker-compose.docs.yml**: Configuração adicional para serviços (por exemplo, documentação, docs preview, etc).
+6. **setup_files**: Pasta Contendo os Arquivos Necessarios para inicialização completa do projeto
 
 ---
 
